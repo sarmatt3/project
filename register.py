@@ -7,7 +7,8 @@
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
-
+import tkinter, hashlib
+from tkinter import filedialog
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -25,6 +26,8 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(800, 600)
+        self.text = []
+        self.fileWay = ''
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.frame = QFrame(self.centralwidget)
@@ -79,7 +82,23 @@ class Ui_MainWindow(object):
         self.lineEdit_3.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0432\u0442\u043e\u0440\u0438\u0442\u0435 \u043f\u0430\u0440\u043e\u043b\u044c", None))
         self.lineEdit_4.setText("")
         self.lineEdit_4.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u0422\u0435\u043b\u0435\u0444\u043e\u043d", None))
+        self.pushButton.clicked.connect(self.getInfo)
+        
+        
     # retranslateUi
+    
+    def getInfo(self):
+        self.text += [self.lineEdit.text(), self.lineEdit_2.text(), self.lineEdit_4.text()]
+        h = hash(tuple(self.text))
+        
+        file = filedialog.asksaveasfilename(defaultextension='.txt', filetypes=[('Text files', '*.txt'), ('All files', '*.*')])
+        
+        if file != "":
+           
+            with open(file, "a", encoding='utf-8') as f:
+                f.write(f'{h}\n')
+                f.close()
+        print(h)
 
 app = QApplication(sys.argv)
 win = QMainWindow()

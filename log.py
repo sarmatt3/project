@@ -7,7 +7,7 @@
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
-
+import subprocess
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -63,6 +63,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         QMetaObject.connectSlotsByName(MainWindow)
+        self.commandLinkButton.clicked.connect(self.goReg)
     # setupUi
 
     def retranslateUi(self, MainWindow):
@@ -74,6 +75,8 @@ class Ui_MainWindow(object):
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u0412\u043e\u0439\u0442\u0438", None))
         self.commandLinkButton.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f", None))
     # retranslateUi
+    def goReg(self):
+        subprocess.run(['python', r"C:\Users\Sarmatt\Desktop\project\register.py"])
 app = QApplication(sys.argv)
 win = QMainWindow()
     
