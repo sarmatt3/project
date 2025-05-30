@@ -6,9 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>458</width>
+    <height>475</height>
    </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -17,22 +20,33 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>70</y>
-      <width>351</width>
-      <height>411</height>
+      <x>20</x>
+      <y>20</y>
+      <width>411</width>
+      <height>401</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <hintingpreference>PreferFullHinting</hintingpreference>
+     </font>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::InputMethodHint::ImhNone</set>
+    </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::StyledPanel</enum>
+     <enum>QFrame::Shape::NoFrame</enum>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Shadow::Raised</enum>
     </property>
+    <property name="midLineWidth">
+     <number>0</number>
+    </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>20</x>
        <y>0</y>
        <width>401</width>
        <height>71</height>
@@ -48,8 +62,8 @@
     <widget class="QLineEdit" name="lineEdit">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>100</y>
+       <x>20</x>
+       <y>90</y>
        <width>221</width>
        <height>22</height>
       </rect>
@@ -61,8 +75,8 @@
     <widget class="QLineEdit" name="lineEdit_2">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>130</y>
+       <x>20</x>
+       <y>140</y>
        <width>221</width>
        <height>22</height>
       </rect>
@@ -80,11 +94,26 @@
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>220</y>
-       <width>131</width>
-       <height>21</height>
+       <x>210</x>
+       <y>360</y>
+       <width>191</width>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>12</pointsize>
+       <italic>true</italic>
+       <stylestrategy>PreferAntialias</stylestrategy>
+       <hintingpreference>PreferFullHinting</hintingpreference>
+      </font>
+     </property>
+     <property name="mouseTracking">
+      <bool>false</bool>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::InputMethodHint::ImhNone</set>
      </property>
      <property name="text">
       <string>Зарегистрироваться</string>
@@ -93,8 +122,8 @@
     <widget class="QLineEdit" name="lineEdit_3">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>160</y>
+       <x>20</x>
+       <y>190</y>
        <width>221</width>
        <height>22</height>
       </rect>
@@ -106,8 +135,8 @@
     <widget class="QLineEdit" name="lineEdit_4">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>190</y>
+       <x>20</x>
+       <y>240</y>
        <width>221</width>
        <height>22</height>
       </rect>
@@ -122,6 +151,96 @@
       <string>Телефон</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Пароль</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Логин</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Повторите пароль</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>220</y>
+       <width>49</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Телефон</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>270</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Тип пользователя</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>290</y>
+       <width>221</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -129,7 +248,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>458</width>
      <height>22</height>
     </rect>
    </property>
