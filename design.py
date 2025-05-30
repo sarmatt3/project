@@ -7,7 +7,7 @@
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
-
+import sys
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -263,3 +263,12 @@ class Ui_MainWindow(object):
         self.pushButton_13.setText(QCoreApplication.translate("MainWindow", u"/", None))
     # retranslateUi
 
+app = QApplication(sys.argv)
+win = QMainWindow()
+    
+ui = Ui_MainWindow()
+ui.setupUi(win)  # Настройка интерфейса
+
+win.show()  # Отображение окна
+
+sys.exit(app.exec())

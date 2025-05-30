@@ -1,11 +1,10 @@
-from pyside6.QtWidgets import QApplication
-from design import Ui_MainWindow
-import sys
-mainWindow = Ui_MainWindow()
-class MainWin(Ui_MainWindow):
-    self.__init__()
-    self.setupUi()
+from register import *
+app = QApplication(sys.argv)
+win = QMainWindow()
+    
+ui = Ui_MainWindow()
+ui.setupUi(win)  # Настройка интерфейса
 
-app =QApplication(sys.arg)
-win = MainWin()
-win.show()
+win.show()  # Отображение окна
+
+sys.exit(app.exec())
