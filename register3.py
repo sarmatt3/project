@@ -63,11 +63,10 @@ class Ui_MainWindow(object):
         self.lineEdit_3 = QLineEdit(self.frame)
         self.lineEdit_3.setObjectName(u"lineEdit_3")
         self.lineEdit_3.setGeometry(QRect(20, 190, 221, 22))
-        self.lineEdit_3.setEchoMode(QLineEdit.EchoMode.Password)
         self.lineEdit_4 = QLineEdit(self.frame)
         self.lineEdit_4.setObjectName(u"lineEdit_4")
         self.lineEdit_4.setGeometry(QRect(20, 240, 221, 22))
-        
+        self.lineEdit_4.setEchoMode(QLineEdit.EchoMode.Password)
         self.label_2 = QLabel(self.frame)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(20, 120, 49, 16))
@@ -91,9 +90,6 @@ class Ui_MainWindow(object):
         self.comboBox = QComboBox(self.frame)
         self.comboBox.setObjectName(u"comboBox")
         self.comboBox.setGeometry(QRect(20, 290, 221, 21))
-        items = ['Администратор', 'Оффициант', 'Повар', 'Охранник', 'Системный администратор']
-        for i in items:
-            self.comboBox.addItem(i)
         self.pushButton_2 = QPushButton(self.frame)
         self.pushButton_2.setObjectName(u"pushButton_2")
         self.pushButton_2.setGeometry(QRect(100, 360, 101, 31))
