@@ -24,22 +24,19 @@ class Main(QMainWindow, Ui_MainWindow):
             elif i in 'QWERTYUIOPASDFGHJKLZXCVBNM': check[2] += 1
             elif i in '!.*@%&#?': check[3] += 1
         if not(check[0] >=1 and check[1] >=1 and check[2] >=1 and check[3] >=1 and len(self.lineEdit_2.text())>=8):
-            showerror('Ошибка', "Пароль не надежный")
+            showerror('Ошибка', "Пароль не надежный. Пароль должен содержать заглавные и строчные латинские буквы, цифры и спец. символы: !.*@%&#?")
         elif self.lineEdit.text() == '' or self.lineEdit_2.text() == '' or self.lineEdit_3.text() == '' or self.lineEdit_4.text() == '':
             showerror('Ошибка', "Заполните все поля")
+        elif not(self.lineEdit_4.text()[:2] == '+7' and len(self.lineEdit_4.text()) == 12):
+            showerror('Ошибка', "Некорректный номер телефона. Формат: +7XXXXXXXXXX")
         else:
             self.baseList = [self.lineEdit.text(), self.lineEdit_2.text(), self.lineEdit_4.text()]
             h = hash(tuple(self.baseList[1]))
             self.baseList[1] = h
             
-            file = filedialog.asksaveasfilename(
-                defaultextension='.txt', 
-                filetypes=[('Text files', '*.txt'), ('All files', '*.*')]
-            )
             
-            if file:
-                with open(file, "a", encoding='utf-8') as f:
-                    f.write(f'login - {self.baseList[0]}: password - {h}: phoneNumber - {self.baseList[2]}\n')
+            with open('data', "a", encoding='utf-8') as f:
+                f.write(f'login - {self.baseList[0]}: password - {h}: phoneNumber - {self.baseList[2]}\n')
             print(h)
         
     
